@@ -1,0 +1,8 @@
+{
+  "name": "HalsteadMetrics",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "79e84b20"
+}
