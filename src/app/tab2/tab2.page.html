@@ -1,9 +1,64 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Analisis 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-card>
+        <ion-item>
+          <ion-label>Codigo</ion-label>
+        </ion-item>
+    
+        <ion-card-content>
+          <ion-item>
+            <ion-input placeholder="Nombre del codigo" [(ngModel)]="nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-textarea rows="10" placeholder="Codigo" [(ngModel)]="codigo"></ion-textarea>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+  <br>
+  <br>
+<ion-button size="small" expand="block" shape="round" (click)="analizar()">Analizar</ion-button>
+  <br>
+  <br>
+  <ion-list>
+    <ion-item>
+        <ion-label>n1 =  {{n1}}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>n2 =  {{n2}}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>N1 =  {{N1}}</ion-label>
+    </ion-item>
+    <ion-item>
+        <ion-label>N2 =  {{N2}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>N =  {{N}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>n = {{n}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>V = {{V}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>D = {{D}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>L =  {{L}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>E =  {{E}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>T =  {{T}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
