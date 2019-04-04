@@ -76,7 +76,8 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-filechooser": {},
       "cordova-plugin-file": {},
-      "cordova-plugin-filepath": {}
+      "cordova-plugin-filepath": {},
+      "cordova-sqlite-storage": {}
     },
     "platforms": [
       "android"

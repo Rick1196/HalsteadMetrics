@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 //files
 import { FileChooser } from '@ionic-native/file-chooser/ngx';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+
+import {StorageService} from './services/storage.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -17,7 +19,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private sqlite: SQLite
+    private sqlite: SQLite,
+    private storage: StorageService
   ) {
     this.initializeApp();
   }
@@ -26,10 +29,10 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.initializeDB();
+      //this.initializeDB();
     });
   }
-
+/*
   private initializeDB(){
     this.sqlite.create({
       name: 'data.db',
@@ -38,12 +41,11 @@ export class AppComponent {
       .then((db: SQLiteObject) => {
     
     
-        db.executeSql('create table if not exists messures(id INTEGER PRIMARY KEY AUTOINCREMENT,nombre text, n1 real, n2 real, n1t real, n2t real, operadores blob, operando blob)', [])
-          .then(() => console.log('Executed SQL'))
-          .catch(e => console.log(e));
+       this.storage.setDatabase(db);
+       this.storage.createTable();
     
     
       })
       .catch(e => console.log(e));
-  }
+  }*/
 }

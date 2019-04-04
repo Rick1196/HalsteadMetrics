@@ -13,11 +13,15 @@ import { File } from '@ionic-native/file/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 
-import {AnalisisService} from './services/analisis.service'
+import {AnalisisService} from './services/analisis.service';
+import {StorageService, al} from './services/storage.service';
+import { IonicStorageModule } from '@ionic/storage';
+import { ToastController, Platform } from '@ionic/angular';
+import {Component, ViewChild} from '@angular/core';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot()],
   providers: [
     StatusBar,
     SplashScreen,
@@ -26,6 +30,13 @@ import {AnalisisService} from './services/analisis.service'
     FilePath,
     AnalisisService,
     SQLite,
+    StorageService,
+    Storage,
+    ToastController,
+    Platform,
+    IonicStorageModule,
+    Component,
+    ViewChild,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

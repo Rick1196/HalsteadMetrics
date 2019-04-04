@@ -23,7 +23,7 @@
       </ion-card>
   <br>
   <br>
-<ion-button size="small" expand="block" shape="round" (click)="analizar()">Analizar</ion-button>
+<ion-button size="small" [disabled]="nombre != ''" expand="block" shape="round" (click)="analizar()">Analizar</ion-button>
   <br>
   <br>
   <ion-list>

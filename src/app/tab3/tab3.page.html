@@ -1,9 +1,77 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Historico
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-subtitle>Ricardo Manuel Perez</ion-card-subtitle>
+      <ion-card-title>Analisis previos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
 
-<ion-content></ion-content>
+        <ion-card  *ngFor="let item of analisis">
+          <ion-item>
+            <ion-label>{{item.nombre}}</ion-label>
+            <ion-icon name="trash" (click)="deleteItem(item)"></ion-icon>
+          </ion-item>
+        
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                  <ion-label>n1 =  {{item.n1}}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>n2 =  {{item.n2}}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>N1 =  {{item.N1}}</ion-label>
+              </ion-item>
+              <ion-item>
+                  <ion-label>N2 =  {{item.N2}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>N =  {{item.N}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>n = {{item.n}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>V = {{item.V}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>D = {{item.D}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>L =  {{item.L}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>E =  {{item.E}}</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>T =  {{item.T}}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+ 
+  <ion-refresher slot="fixed"
+  (ionRefresh)="ionRefresh($event)"
+  (ionPull)="ionPUll($event)"
+  (ionStart)="ionStart($event)">
+  <ion-refresher-content
+  pullingIcon="arrow-dropdown"
+  pullingText="Arrstre para actualizar"
+  refreshingSpinner="circles"
+  refreshingText="Actualizando...">
+
+  </ion-refresher-content>
+
+  </ion-refresher>
+</ion-content>

@@ -39,11 +39,17 @@
     </ion-list>
     </ion-card-content>
   </ion-card>
-  <ion-content>
     <!-- fab placed to the top end -->
   <ion-button size="small" expand="block" shape="round" (click)="select()">Nuevo</ion-button>
-    <br>
   <br>
+  <br>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>{{nombre}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
   <ion-list>
     <ion-item>
         <ion-label>n1 =  {{n1}}</ion-label>
